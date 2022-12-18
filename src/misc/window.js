@@ -8,6 +8,8 @@ if (
   result = self;
 } else if (typeof global !== "undefined") {
   result = global;
+} else if (unsafeWindow) {
+  result = unsafeWindow;
 } else if (window) {
   result = window;
 }
